@@ -2,7 +2,14 @@ import { GrovePi } from "./sensors";
 
 const sensor = new GrovePi(1);
 
-//version 1.0
+/*
+ * The sensors actually don't like being queried concurrently which the code
+ * below does more or less. Improving the code e.g. by accumulating an object
+ * in each promise, is left as an exercise for the reader. Other interesting
+ * ideas can be found in https://stackoverflow.com/q/28250680/759042.
+ */
+
+// version 1.0
 
 sensor.measureTemperature()
 	.then((temp) => console.log(`Temperature is ${temp}`));
