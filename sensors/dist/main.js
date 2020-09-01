@@ -8,7 +8,7 @@ var sensor = new sensors_1.GrovePi(1);
  * in each promise, is left as an exercise for the reader. Other interesting
  * ideas can be found in https://stackoverflow.com/q/28250680/759042.
  */
-// version 1.2
+// version 1.0
 sensor.measureTemperature()
     .then(function (temp) { return console.log("Temperature is " + temp); });
 sensor.measureHumidity()
