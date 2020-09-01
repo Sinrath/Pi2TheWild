@@ -9,7 +9,7 @@ const sensor = new GrovePi(1);
  * ideas can be found in https://stackoverflow.com/q/28250680/759042.
  */
 
-// version 1.0
+// version 1.2
 
 sensor.measureTemperature()
 	.then((temp) => console.log(`Temperature is ${temp}`));
