@@ -13,6 +13,8 @@ const sensor = new GrovePi(1);
 
 const server = express();
 
+server.use(express.static('public'));
+
 
 server.get("/", function (req, res) {
     
@@ -21,7 +23,6 @@ server.get("/", function (req, res) {
         let appliedValues = template({
             temperatureNow: temp
         })
-        console.log(appliedValues);
         res.send(appliedValues);
     })
     
