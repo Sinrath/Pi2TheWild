@@ -9,7 +9,8 @@ const server = express();
 server.get("/", function (req, res) {
     
     sensor.measureTemperature()
-	.then((temp) => res.send(`Die Temperatur ist: ${temp}`));
+    .then((temp) => res.send(`Die Temperatur ist: ${temp}`))
+    .catch(error => console.log(error));
 
 });
 
