@@ -19,14 +19,19 @@ Als Forscher will ich wissen, welche minimal und Höchsttemperaturen jeden Tag d
 
 ![59F0DBAD-F7DE-424D-9024-7AB280F730FD](https://github.zhaw.ch/storage/user/3667/files/703efb00-eb78-11ea-89fc-304bea92d504)
 
-### **Aufgaben**
+### **Woche-1**
 
--  Sensor Ausgabe coden
--  Datenbank erstellen
--  Sensor Ausgabe in Datenbank übertragen 
--  GUI erstellen
--  Datenbank mit GUI verbinden
--  Testen
+- Sensor Ausgabe coden
+- Local Website
+- HTML colde
+- Temperatur, Humidity anzeige
+- CSS
 
+### **Woche-2**
 
+- Datenbank erstellen
+- Sensorauswahl
+- Sensor Ausgabe in Datenbank übertragen 
+- GUI erstellen
+ 
 
