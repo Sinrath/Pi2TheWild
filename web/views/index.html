@@ -1,15 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>
-        {{temperatureNow}}
-    </p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wetterstation</title>
+        <style>
+            body{
+                text-align: center;
+            }
+            header{
+                margin: 0;
+                padding: 1em;
+                background: url('/web/css/background_header.png') no-repeat left;
+                background-color: #ecc183;
+                border: 1px solid transparent; 
+                color: #ffffff;
+                font-family: 'Lucida Console', Courier, monospace;
+                text-align: center;           
+            }
+            nav{
+                box-shadow: 0 .3em .3em 0 rgba(0, 0, 0, .25);
+                text-align: center;
+                margin: 0;
+                padding: 1em;
+                list-style-type: none; 
+            }
+            nav li {
+                background-color: rgb(185, 161, 50);
+                color: white;
+                font-family: 'Lucida Console', Courier, monospace;
+                display: inline-block;
+                width: 80%;
+                margin: .25em 0;
+                padding: .m 1em;
+                border-radius: 1.5em;
+            }
+            main>h1 {
+                font-family: 'Lucida Console', Courier, monospace, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Wetterstation</a></h1>
+            <p>Gruppe 2</p>
+        </header>
 
-    
-</body>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Über uns</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Die aktuelle Temperatur beträgt:</h1>
+            <h2>{{temperatureNow}}</h2>
+        </main>
+    </body>
 </html>
