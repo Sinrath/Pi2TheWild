@@ -33,5 +33,6 @@ Als Forscher will ich wissen, welche minimal und Höchsttemperaturen jeden Tag d
 - Sensorauswahl
 - Sensor Ausgabe in Datenbank übertragen 
 - GUI erstellen
+- GUI Graphen von Temp.
  
 
