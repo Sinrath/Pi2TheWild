@@ -1,4 +1,4 @@
-# Gruppe2_2020Als Forscher will ich wissen, welche minimal und Höchsttemperaturen jeden Tag der Woche herrschen, damit Annahmen über das Temperaturverhalten getroffen werden können.
+Als Forscher will ich wissen, welche minimal und Höchsttemperaturen jeden Tag der Woche herrschen, damit Annahmen über das Temperaturverhalten getroffen werden können.
 
 ### **Anforderungen**
 
@@ -21,12 +21,12 @@
 
 ### **Aufgaben**
 
-- [x] Sensor Ausgabe coden
-- [x] Datenbank erstellen
-- [ ] Sensor Ausgabe in Datenbank übertragen 
-- [ ] GUI erstellen
-- [ ] Datenbank mit GUI verbinden
-- [ ] Testen
+-  Sensor Ausgabe coden
+-  Datenbank erstellen
+-  Sensor Ausgabe in Datenbank übertragen 
+-  GUI erstellen
+-  Datenbank mit GUI verbinden
+-  Testen
 
 
 
