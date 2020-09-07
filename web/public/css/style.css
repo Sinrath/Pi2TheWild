@@ -4,7 +4,7 @@ body{
 header{
     margin: auto;
     padding: 1em;
-    background: url('../public/background_header.png') no-repeat left;
+    background: url('/picture/background_header.png') no-repeat left;
     background-color: #ecc183;
     border: 1px solid transparent; 
     color: #ffffff;
