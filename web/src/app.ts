@@ -2,7 +2,7 @@ import express from "express";
 import handlebars from "handlebars";
 import path from "path";
 import fs from "fs";
-import { GrovePi } from "../../sensor/src/sensors";
+import { GrovePi, Humidity } from "../../sensor/src/sensors";
 
 
 const indexFilePath = path.join(__dirname, "../views/index.html");
@@ -22,6 +22,14 @@ server.get("/", function (req, res) {
     .then((temp) => {
         let appliedValues = template({
             temperatureNow: temp
+        })
+        res.send(appliedValues);
+    })
+    
+    sensor.measureHumidity()
+    .then((humidity) => {
+        let appliedValues = template({
+            humidityNow: humidity
         })
         res.send(appliedValues);
     })
