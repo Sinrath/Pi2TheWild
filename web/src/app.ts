@@ -20,25 +20,20 @@ server.get("/", function (req, res) {
     
     sensor.measureTemperature()
     .then((temp) => {
-        let appliedValues = template({
-            temperatureNow: temp
-        })
+        sensor.measureHumidity()
+        .then((humidity) => {
+            let appliedValues = template({
+                humidityNow: humidity,
+                temperatureNow: temp
+         })
         res.send(appliedValues);
+     })
     })
+     
     
-    sensor.measureHumidity()
-    .then((humidity) => {
-        let appliedValues = template({
-            humidityNow: humidity
-        })
-        res.send(appliedValues);
-    })
-    
-        .catch(error => console.log(error));
-
+    .catch(error => console.log(error));
     
 });
-
 
 server.listen(3000, function (){
     console.log("Server listening on port 3000!");

@@ -32,4 +32,8 @@ nav li{
 }
 main>h1 {
     font-family: 'Lucida Console', Courier, monospace, sans-serif;
+    font-size: 25px;
+}
+main>h2 {
+    font-size: 25px;
 }
