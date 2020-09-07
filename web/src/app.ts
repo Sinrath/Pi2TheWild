@@ -2,7 +2,7 @@ import express from "express";
 import handlebars from "handlebars";
 import path from "path";
 import fs from "fs";
-import { GrovePi, Humidity } from "../../sensor/src/sensors";
+import { GrovePi } from "../../sensor/src/sensors";
 
 
 const indexFilePath = path.join(__dirname, "../views/index.html");
