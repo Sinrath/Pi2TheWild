@@ -13,13 +13,13 @@ var fileContent = fs_1.default.readFileSync(indexFilePath, "utf8");
 var template = handlebars_1.default.compile(fileContent);
 var sensor = new sensors_1.GrovePi(1);
 var server = express_1.default();
+server.use(express_1.default.static('public'));
 server.get("/", function (req, res) {
     sensor.measureTemperature()
         .then(function (temp) {
         var appliedValues = template({
             temperatureNow: temp
         });
-        console.log(appliedValues);
         res.send(appliedValues);
     })
         .catch(function (error) { return console.log(error); });
