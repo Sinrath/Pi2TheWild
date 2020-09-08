@@ -5,7 +5,7 @@ import fs from "fs";
 import { GrovePi } from "../../sensor/src/sensors";
 
 
-const indexFilePath = path.join(__dirname, "../views/index.html");
+const indexFilePath = path.join(__dirname, "../../../views/index.html");
 const fileContent = fs.readFileSync(indexFilePath, "utf8");
 const template = handlebars.compile(fileContent);
 
