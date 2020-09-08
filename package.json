@@ -1,0 +1,15 @@
+{
+  "name": "pi2thewild",
+  "version": "1.0.0",
+  "description": "Als Forscher will ich wissen, welche minimal und Höchsttemperaturen jeden Tag der Woche herrschen, damit Annahmen über das Temperaturverhalten getroffen werden können.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.zhaw.ch/Vorpraktikum-IT/Pi2TheWild.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
