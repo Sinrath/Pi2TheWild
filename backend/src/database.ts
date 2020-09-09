@@ -1,6 +1,7 @@
-import {Client, Connect} from 'ts-postgres'
+import {Client, Connect} from 'ts-postgres';
 import moment from 'moment';
 import {GrovePi} from "../../sensor/src/sensors";
+import { readFileSync } from 'fs';
 
 const client = new Client ({
     user : 'postgres',
@@ -14,16 +15,20 @@ const sensor = new GrovePi(1);
 
 const datum:Date = new Date();
 
+const idNumber = readFileSync("/home/pi/Pi2TheWild/ID/id.txt", "utf-8");
+
 sensor.measureTemperature()
     .then((temp) => {
-
 
     let formattedDate = (moment(datum)).format('YYYY-MM-DD HH:mm:ss');
     console.log(formattedDate);
     
-    let addDatum = "INSERT INTO messung (id, temperatur, datum) VALUES ("+6172+",'"+temp+"','"+formattedDate+"');";
+    //Database Insertion
+    let addDatum = "INSERT INTO measurement VALUES ("+idNumber+",'"+formattedDate+"','"+temp+"');";
     console.log(addDatum);
 
+    //let addId = "INSERT INTO device VALUES ('"+idNumber+"');";
+    //console.log(addId);
 
 
     client.connect().then( (connect: Connect) => {
