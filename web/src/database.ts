@@ -14,21 +14,28 @@ const sensor = new GrovePi(1);
 
 const datum:Date = new Date();
 
-let formattedDate = (moment(datum)).format('YYYY-MM-DD HH:mm:ss')
-console.log(formattedDate)
+sensor.measureTemperature()
+    .then((temp) => {
+
+
+    let formattedDate = (moment(datum)).format('YYYY-MM-DD HH:mm:ss');
+    console.log(formattedDate);
     
-let addDatum = "INSERT INTO messung (id, temperatur, datum) VALUES ("+6172+","+sensor.measureTemperature+",'"+formattedDate+"');";
-console.log(addDatum);
+    let addDatum = "INSERT INTO messung (id, temperatur, datum) VALUES ("+6172+","+temp+",'"+formattedDate+"');";
+    console.log(addDatum);
 
 
-client.connect().then( (connect: Connect) => {
-    console.log(connect);
-}).catch((reason:any) => {
-    console.log(reason);  
+
+    client.connect().then( (connect: Connect) => {
+        console.log(connect);   
+    }).catch((reason:any) => {
+        console.log(reason);  
+    });
+
+    client.query(addDatum).then((result:any)=>{
+        console.log(result);
+    }).catch((reason:any)=>{
+        console.log(reason);
+    })
+
 });
-
-client.query(addDatum).then((result:any)=>{
-    console.log(result);
-}).catch((reason:any)=>{
-    console.log(reason);
-})
