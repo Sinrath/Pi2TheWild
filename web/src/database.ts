@@ -21,7 +21,7 @@ sensor.measureTemperature()
     let formattedDate = (moment(datum)).format('YYYY-MM-DD HH:mm:ss');
     console.log(formattedDate);
     
-    let addDatum = "INSERT INTO messung (id, temperatur, datum) VALUES ("+6172+","+temp+",'"+formattedDate+"');";
+    let addDatum = "INSERT INTO messung (id, temperatur, datum) VALUES ("+6172+",'"+temp+"','"+formattedDate+"');";
     console.log(addDatum);
 
 

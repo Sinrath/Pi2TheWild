@@ -14,7 +14,7 @@ export class Temperature {
 	}
 
 	public toString = (): string => {
-		return `${this.value} °C`;
+		return `${this.value}`;
 	}
 }
 

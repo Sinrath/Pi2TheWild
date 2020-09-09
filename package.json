@@ -11,5 +11,8 @@
     "url": "https://github.zhaw.ch/Vorpraktikum-IT/Pi2TheWild.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.27.0"
+  }
 }
