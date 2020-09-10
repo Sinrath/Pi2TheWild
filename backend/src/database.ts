@@ -13,34 +13,34 @@ const client = new Client ({
 
 const sensor = new GrovePi(1);
 
-const datum:Date = new Date();
-
 const idNumber = readFileSync("/home/pi/Pi2TheWild/ID/id.txt", "utf-8");
 
-sensor.measureTemperature()
-    .then((temp) => {
-
-    let formattedDate = (moment(datum)).format('YYYY-MM-DD HH:mm:ss');
-    console.log(formattedDate);
-    
-    //Database Insertion
-    let addDatum = "INSERT INTO measurement VALUES ("+idNumber+",'"+formattedDate+"','"+temp+"');";
-    console.log(addDatum);
-
-    //let addId = "INSERT INTO device VALUES ('"+idNumber+"');";
-    //console.log(addId);
-
-
-    client.connect().then( (connect: Connect) => {
-        console.log(connect);   
-    }).catch((reason:any) => {
-        console.log(reason);  
-    });
-
-    client.query(addDatum).then((result:any)=>{
-        console.log(result);
-    }).catch((reason:any)=>{
-        console.log(reason);
-    })
-
+client.connect().then( (connect: Connect) => {
+    console.log(connect);   
+}).catch((reason:any) => {
+    console.log(reason);  
 });
+
+export const addTemp2db = () => {
+    let datum:Date = new Date();
+    sensor.measureTemperature()
+        .then((temp) => {
+
+        let formattedDate = (moment(datum)).format('YYYY-MM-DD HH:mm:ss');
+        console.log(formattedDate);
+        
+        //Database Insertion
+        let addDatum = "INSERT INTO measurement VALUES ("+idNumber+",'"+formattedDate+"','"+temp+"');";
+        console.log(addDatum);
+
+        //let addId = "INSERT INTO device VALUES ('"+idNumber+"');";
+        //console.log(addId);
+
+        client.query(addDatum).then((result:any)=>{
+            console.log(result);
+        }).catch((reason:any)=>{
+            console.log(reason);
+        })
+
+    });
+}
