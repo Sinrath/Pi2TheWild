@@ -1,7 +1,7 @@
-import { addTemp2db } from './database';
+import { addmeasurement2db } from './database';
 
 function callEverySecond() {
-    addTemp2db();
+    addmeasurement2db();
 };
 
-setInterval(callEverySecond, 5000);
+setInterval(callEverySecond, 60000);
