@@ -33,7 +33,7 @@ export class Humidity {
 	}
 
 	public toString = (): string => {
-		return `${this.value}%`;
+		return `${this.value}`;
 	}
 }
 
@@ -91,7 +91,7 @@ export class BarometricPressure {
 	}
 
 	public toString = (): string => {
-		return `${this.pressureNN} hPa`;
+		return `${this.pressureNN}`;
 	}
 }
 
