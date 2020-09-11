@@ -241,9 +241,7 @@
   -o-transform: rotate(-25deg);
   transform: rotate(-25deg);
 }
-.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation25 span {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.9063077870366499, M12=0.42261826174069944, M21=-0.42261826174069944, M22=0.9063077870366499)";
-}
+
 .tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation45 {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -251,9 +249,7 @@
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation45 span {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.7071067811865476, M12=0.7071067811865475, M21=-0.7071067811865475, M22=0.7071067811865476)";
-}
+
 .tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation65 {
   -webkit-transform: rotate(-65deg);
   -moz-transform: rotate(-65deg);
@@ -261,9 +257,7 @@
   -o-transform: rotate(-65deg);
   transform: rotate(-65deg);
 }
-.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation65 span {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.42261826174069944, M12=0.9063077870366499, M21=-0.9063077870366499, M22=0.42261826174069944)";
-}
+
 .tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation85 {
   -webkit-transform: rotate(-85deg);
   -moz-transform: rotate(-85deg);
@@ -271,9 +265,7 @@
   -o-transform: rotate(-85deg);
   transform: rotate(-85deg);
 }
-.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation85 span {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.08715574274765814, M12=0.9961946980917455, M21=-0.9961946980917455, M22=0.08715574274765814)";
-}
+
 .tui-chart .tui-chart-plot-area {
   position: absolute;
   right: 10px;
