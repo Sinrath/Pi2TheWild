@@ -5,7 +5,7 @@ import fs from "fs";
 import { GrovePi } from "../../sensor/src/sensors";
 
 
-const indexFilePath = path.join(__dirname, "../../../views/index.html");
+const indexFilePath = path.join(__dirname, "../../../public/views/index.html");
 const fileContent = fs.readFileSync(indexFilePath, "utf8");
 const template = handlebars.compile(fileContent);
 
@@ -26,7 +26,7 @@ server.get("/", function (req, res) {
                 humidityNow: humidity,
                 temperatureNow: temp
          })
-        res.send(appliedValues);
+         res.send(appliedValues);
      })
     })
      
@@ -34,6 +34,7 @@ server.get("/", function (req, res) {
     .catch(error => console.log(error));
     
 });
+
 
 server.listen(3000, function (){
     console.log("Server listening on port 3000!");
