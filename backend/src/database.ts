@@ -37,11 +37,11 @@ export const addmeasurement2db = () => {
         })
         .then((humidity) => {
  
-            let formattedDate = (moment(datum)).format('YYYY-MM-DD HH:mm:ss');
+            let formattedDate = (moment(datum)).format('YYYY-MM-DD HH:mm');
             console.log(formattedDate);
  
             //Database Insertion
-            let addData = "INSERT INTO measurement VALUES ("+idNumber+",'"+formattedDate+"','"+lastTemp+"','"+humidity+"','"+lastPressure+"');";
+            let addData = "INSERT INTO messungtest VALUES ("+idNumber+",'"+formattedDate+"','"+lastTemp+"','"+humidity+"','"+lastPressure+"');";
             console.log(addData);
  
             //let addId = "INSERT INTO device VALUES ('"+idNumber+"');";
