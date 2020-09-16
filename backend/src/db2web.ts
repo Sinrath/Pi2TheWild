@@ -1,6 +1,5 @@
 import {Client, Connect} from 'ts-postgres';
-import { readRowData } from 'ts-postgres/dist/src/protocol';
-import { ResultRow } from 'ts-postgres/dist/src/result';
+import { addmeasurement2db } from './database';
 
 const client = new Client ({
     user : 'postgres',
@@ -18,7 +17,9 @@ client.connect().then( (connect: Connect) => {
 });
  
 export const readdatemeasurement = () => {
-    let readdata = "SELECT * FROM mülleimer;"; //average temp of the last 7 days
+    let readdata = "SELECT * FROM messungtest;"; //average temp of the last 7 days
+    let deleteHighest = "DELETE FROM messungtest WHERE temperature in (SELECT temperature FROM (SELECT * FROM messungtest ORDER BY temperature DESC LIMIT 1) a);";
+    let deleteLowest = "DELETE FROM messungtest WHERE temperature in (SELECT temperature FROM (SELECT * FROM messungtest ORDER BY temperature ASC LIMIT 1) a);";
     client.query(readdata).then((result:any)=>{
         let rows = result.rows;
         let arraydate = [];
@@ -35,3 +36,4 @@ export const readdatemeasurement = () => {
         return reason;
 })}
 console.log(readdatemeasurement());
+

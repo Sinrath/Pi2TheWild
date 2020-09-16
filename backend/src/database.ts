@@ -21,7 +21,7 @@ client.connect().then( (connect: Connect) => {
     console.log(reason);  
 });
  
-export const addmeasurement2db = () => {
+export const addmeasurement2db:any = () => {
     let datum:Date = new Date();
     let lastTemp:Temperature;
     let lastPressure: BarometricPressure;
@@ -41,9 +41,8 @@ export const addmeasurement2db = () => {
             console.log(formattedDate);
  
             //Database Insertion
-            let addData = "INSERT INTO messungtest VALUES ("+idNumber+",'"+formattedDate+"','"+lastTemp+"','"+humidity+"','"+lastPressure+"');";
-            console.log(addData);
- 
+            let addData = "INSERT INTO mülleimer VALUES ("+idNumber+",'"+formattedDate+"','"+lastTemp+"','"+humidity+"','"+lastPressure+"');";
+
             //let addId = "INSERT INTO device VALUES ('"+idNumber+"');";
             //console.log(addId);
  
