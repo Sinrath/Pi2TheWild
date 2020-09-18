@@ -1,6 +1,8 @@
+
+
 var container = document.getElementById('chart-area');
 var data = {
-    categories: [],
+    categories: ['18.09.2020'],
     series: [
         {
         name: 'Pi-0001',
@@ -30,6 +32,15 @@ var options = {
     },
     tooltip: {
         suffix: '°C'
+    },
+    plot: {
+        bands: [
+            {
+                range: ['17/09/2020', '19/09/2020'],
+                color: 'white',
+                opacity: 0.2
+            }
+        ],
     }
 };
 var theme = {

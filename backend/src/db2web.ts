@@ -39,7 +39,9 @@ export async function readmeasurement():Promise<Measurement> {
         arraytemp.push(tempfromzero)
         arrayhumidity.push(humidityfromzero)
         arraypressure.push(pressurefromzero)
+        console.log(row.get('datum'))
     }
+    
     return new Measurement(arrayId, arraydate, arraytemp, arrayhumidity, arraypressure);
 
     } finally {

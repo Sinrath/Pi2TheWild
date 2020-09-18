@@ -11,13 +11,13 @@ let intervalMeasurement: NodeJS.Timeout;
 
 export let callEverySecond = (finished: () => void ): void => {
     let counter = 1;
-    setTimeout(finished, 60000);
+    setTimeout(finished, 300000);
     //finished();
 
     intervalMeasurement = setInterval(() => {
         addmeasurement2db();
         counter++;
-    }, 1000);
+    }, 60000);
 }; 
 
 let finished = (): void => {
