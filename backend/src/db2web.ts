@@ -19,7 +19,7 @@ const client = new Client ({
 
 export async function readmeasurement():Promise<Measurement> {
     await client.connect();
-    let readdata = "SELECT * FROM mülleimer;";
+    let readdata = "SELECT * FROM measurement;";
     try {
     const rows = client.query(readdata);
         let arrayId = new Array<number>();
@@ -29,16 +29,16 @@ export async function readmeasurement():Promise<Measurement> {
         let arraypressure = [];
         
     for await (let row of rows) {
-            let idfromzero = row.get('id') as number;
-            let datefromzero = row.get('datum') as string;
-            let tempfromzero = row.get('temperature') as number;
-            let humidityfromzero = row.get('humidity') as number;
-            let pressurefromzero = row.get('pressure') as number;
-            arrayId.push(idfromzero)
-            arraydate.push(datefromzero)
-            arraytemp.push(tempfromzero)
-            arrayhumidity.push(humidityfromzero)
-            arraypressure.push(pressurefromzero)
+        let idfromzero = row.get('id') as number;
+        let datefromzero = row.get('datum') as string;
+        let tempfromzero = row.get('temperature') as number;
+        let humidityfromzero = row.get('humidity') as number;
+        let pressurefromzero = row.get('pressure') as number;
+        arrayId.push(idfromzero)
+        arraydate.push(datefromzero)
+        arraytemp.push(tempfromzero)
+        arrayhumidity.push(humidityfromzero)
+        arraypressure.push(pressurefromzero)
     }
     return new Measurement(arrayId, arraydate, arraytemp, arrayhumidity, arraypressure);
 

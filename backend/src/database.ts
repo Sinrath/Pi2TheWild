@@ -1,6 +1,6 @@
 import {Client, Connect} from 'ts-postgres';
 import moment from 'moment';
-import {BarometricPressure, GrovePi, Temperature} from "../../sensor/src/sensors";
+import {GrovePi} from "../../sensor/src/sensors";
 import { readFileSync } from 'fs';
  
 const client = new Client ({
@@ -39,7 +39,7 @@ export const addmeasurement2db:any = async() => {
     let formattedDate = (moment(datum)).format('YYYY-MM-DD HH:mm');
     console.log(formattedDate);
     //Database Insertion
-    let addData = "INSERT INTO mülleimer VALUES ("+idNumber+",'"+formattedDate+"','"+values.temp+"','"+values.humidity+"','"+values.pressure+"');";
+    let addData = "INSERT INTO measurement VALUES ("+idNumber+",'"+formattedDate+"','"+values.temp+"','"+values.humidity+"','"+values.pressure+"');";
 
     //let addId = "INSERT INTO device VALUES ('"+idNumber+"');";
     //console.log(addId);
