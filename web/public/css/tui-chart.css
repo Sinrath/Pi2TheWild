@@ -807,34 +807,66 @@ header{
   text-align: center;
   font-weight: bold;
 }
-nav{
-  box-shadow: 0 0 .4em 0 rgba(0, 0, 0, .50);
-  text-align: center;
-  list-style-type: none;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+nav {
   overflow: hidden;
   background-color: #333;
 }
 
-li {
+nav a {
   float: left;
-}
-
-li a {
-  display: block;
+  font-size: 20px;
   color: white;
+  font-weight: bold;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-weight: bold;
 }
 
-li a:hover {
-  background-color: #111;
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  font-weight: bold;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+nav a:hover, .dropdown:hover .dropbtn {
+  background-color: #000;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 14px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: red;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 main>h1 {
   font-family: 'Lucida Console', Courier, monospace, sans-serif;

@@ -25,15 +25,10 @@
         </div>
         <a href="/views/settings.html">Settings</a>
     </nav>
-    <header>
-        <h1>Wetterstation</a></h1>
-        <h2>Pi2TheWild</h2>
-    </header>
     <main>
-        <h1>Die aktuelle Temperatur beträgt:</h1>
-        <h2>{{temperatureNow}}</h2>
-        <h1>Die aktuelle Luftfeuchtigkeit beträgt</h1>
-        <h2>{{humidityNow}}</h2>
+        <div id="chart-area">
+            <script src="/scripts/temp.js"></script>
+        </div>
     </main>
 </body>
 </html>

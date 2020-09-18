@@ -4,11 +4,11 @@ var data = {
     series: [
         {
         name: 'Pi-0001',
-        data: [25.3, 23.4, 26.8, 29.3, 21.3, 19.9, 23.9]
+        data: [1021.3, 1021.8, 1022.1, 1022.3, 1022.7, 1021.6, 1021.1]
         },
         {
         name: 'Pi-0002',
-        data: [22.9, 20.2, 24.0, 22.1, 27.4, 26.3, 22.5]
+        data: [1020.7, 1019.8, 1021.3, 1022.3, 1022.9, 1022.6, 1021.9]
         }
     ]
 };
@@ -16,10 +16,10 @@ var options = {
     chart: {
         width: 1200,
         height: 400,
-        title: 'Average Temperature each Day'
+        title: 'Average Air Pressure each Day'
     },
     yAxis: {
-        title: 'Temperature (°C)',
+        title: 'Air Pressure (hPa)',
     },
     xAxis: {
         title: 'Time',
@@ -28,14 +28,12 @@ var options = {
         tickInterval: 'auto'
     },
     series: {
-        zoomable: true // zoom by mouse drag
-    },
-    series: {
+        zoomable: true,
         showDot: true,
         zoomable: true
     },
     tooltip: {
-        suffix: '°C'
+        suffix: 'hPa'
     },
     plot: {
         bands: [

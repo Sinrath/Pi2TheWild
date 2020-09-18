@@ -12,15 +12,22 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/views/chart.html">Chart</a></li>
-            <li><a href="/views/settings.html">Settings</a></li>
-        </ul>
+        <a href="/">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Charts 
+            <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/views/temp.html">Temperature</a>
+                <a href="/views/humidity.html">Humidity</a>
+                <a href="/views/pressure.html">Pressure</a>
+            </div>
+        </div>
+        <a href="/views/settings.html">Settings</a>
     </nav>
     <main>
         <div id="chart-area">
-            <script src="/script/chart.js"></script>
+            <script src="/scripts/pressure.js"></script>
         </div>
     </main>
 </body>
