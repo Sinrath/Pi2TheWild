@@ -1,14 +1,10 @@
 var container = document.getElementById('chart-area');
 var data = {
-    categories: ['08/09/2020', '09/09/2020', '10/09/2020', '11/09/2020', '12/09/2020', '13/09/2020', '14/09/2020'],
+    categories: [],
     series: [
         {
         name: 'Pi-0001',
-        data: [25.3, 23.4, 26.8, 29.3, 21.3, 19.9, 23.9]
-        },
-        {
-        name: 'Pi-0002',
-        data: [22.9, 20.2, 24.0, 22.1, 27.4, 26.3, 22.5]
+        data: [25]
         }
     ]
 };
@@ -34,15 +30,6 @@ var options = {
     },
     tooltip: {
         suffix: '°C'
-    },
-    plot: {
-        bands: [
-            {
-                range: ['08/09/2020', '14/09/2020'],
-                color: 'white',
-                opacity: 0.2
-            }
-        ],
     }
 };
 var theme = {
@@ -56,4 +43,29 @@ var theme = {
 // For apply theme
 tui.chart.registerTheme('myTheme', theme);
 options.theme = 'myTheme';
-var chart = tui.chart.lineChart(container, data, options);
+
+function loadDataDefault () {
+    fetch("/measurement").then((result) =>
+        result.json().then(function (fetch_result) {
+            console.log(fetch_result);
+            
+            //for(var index in fetch_result.arraydate) {
+              //  chart.addData(fetch_result.arraydate[index], [fetch_result.arraytemp[index]]);    
+            //}
+
+            var data = {
+                categories: fetch_result.arraydate,
+                series: [
+                    {
+                    name: 'Pi-0001',
+                    data: fetch_result.arraytemp
+                    }
+                ]
+            };
+
+            var container = document.getElementById('chart-area')
+            var chart = tui.chart.lineChart(container, data, options);
+        })
+    );
+}
+loadDataDefault();

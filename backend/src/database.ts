@@ -20,39 +20,35 @@ client.connect().then( (connect: Connect) => {
 }).catch((reason:any) => {
     console.log(reason);  
 });
- 
-export const addmeasurement2db:any = () => {
-    let datum:Date = new Date();
-    let lastTemp:Temperature;
-    let lastPressure: BarometricPressure;
- 
-    sensor.measureTemperature()
-        .then((temp:Temperature) => {
-            lastTemp = temp;
-            return sensor.measureBarometricPressure(438);
-        })
-        .then((pressure) => {
-            lastPressure = pressure;
-            return sensor.measureHumidity();
-        })
-        .then((humidity) => {
- 
-            let formattedDate = (moment(datum)).format('YYYY-MM-DD HH:mm');
-            console.log(formattedDate);
- 
-            //Database Insertion
-            let addData = "INSERT INTO mülleimer VALUES ("+idNumber+",'"+formattedDate+"','"+lastTemp+"','"+humidity+"','"+lastPressure+"');";
 
-            //let addId = "INSERT INTO device VALUES ('"+idNumber+"');";
-            //console.log(addId);
- 
- 
-            client.query(addData).then((result:any)=>{
-                console.log(result);
-            }).catch((reason:any)=>{
-                console.log(reason);
-        })
- 
- 
-    });
+export const addmeasurement2db:any = async() => {
+    let datum:Date = new Date();
+    async function asyncGetSensorValues() {
+        let temp = await sensor.measureTemperature();
+        let hum = await sensor.measureHumidity();
+        let press = await sensor.measureBarometricPressure(438.0);
+        return {temp: temp ,humidity: hum, pressure: press }
+    }
+    let values; 
+    do {
+        values = await asyncGetSensorValues();
+    } while (values.temp.value == 0.0 && values.humidity.value == 0.0)
+    console.log("Here's the value: " + values.humidity); 
+
+
+    let formattedDate = (moment(datum)).format('YYYY-MM-DD HH:mm');
+    console.log(formattedDate);
+    //Database Insertion
+    let addData = "INSERT INTO mülleimer VALUES ("+idNumber+",'"+formattedDate+"','"+values.temp+"','"+values.humidity+"','"+values.pressure+"');";
+
+    //let addId = "INSERT INTO device VALUES ('"+idNumber+"');";
+    //console.log(addId);
+
+    client.query(addData).then((result:any)=>{
+        console.log(result);
+    }).catch((reason:any)=>{
+        console.log(reason);
+    })
+
 }
+addmeasurement2db();
