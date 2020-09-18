@@ -64,7 +64,7 @@ function loadDataDefault () {
             };
 
             var container = document.getElementById('chart-area')
-            var chart = tui.chart.lineChart(container, data, options);
+            tui.chart.lineChart(container, data, options);
         })
     );
 }
