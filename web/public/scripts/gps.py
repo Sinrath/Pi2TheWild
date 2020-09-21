@@ -150,4 +150,4 @@ if __name__ =="__main__":
         time.sleep(1)
         in_data = gps.read()
         if in_data != []:
-	    print gps.latitude, gps.longitude
+            print gps.latitude, gps.longitude
