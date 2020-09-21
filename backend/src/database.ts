@@ -5,7 +5,7 @@ import { readFileSync } from 'fs';
  
 const client = new Client ({
     user : 'postgres',
-    host : 'clt-lab-t-6172',
+    host : 'localhost',
     database : 'Pi2TheWild',
     password: '1234',
     port : 5432

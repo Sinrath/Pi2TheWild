@@ -3,7 +3,7 @@ import handlebars from "handlebars";
 import path from "path";
 import fs from "fs";
 import { GrovePi } from "../../sensor/src/sensors";
-import {readmeasurement} from "../../backend/src/db2web";
+import {readmeasurement} from "./db2web";
 
 
 const indexFilePath = path.join(__dirname, "../../../public/views/index.html");
