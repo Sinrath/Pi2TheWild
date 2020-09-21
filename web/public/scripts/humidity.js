@@ -16,10 +16,10 @@ var options = {
     chart: {
         width: 1200,
         height: 400,
-        title: 'Temperature'
+        title: 'Humidity'
     },
     yAxis: {
-        title: 'Temperature (°C)',
+        title: 'Humidity (%)',
     },
     xAxis: {
         title: 'Time',
@@ -73,10 +73,6 @@ function loadDataDefault () {
                     name: fetch_result.arrayId[0].toString(),
                     data: fetch_result.arrayhumidity
                     },
-                    {
-                    name: 'Pi-0001',
-                    data: fetch_result.arrayhumidity
-                    }
                 ]
             };
 
