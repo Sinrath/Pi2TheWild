@@ -32,7 +32,7 @@ export const addmeasurement2db:any = async() => {
     let values; 
     do {
         values = await asyncGetSensorValues();
-    } while (values.temp.value == 0.0 && values.humidity.value == 0.0 && values.pressure.localPressure <= 900)
+    } while (values.temp.value == 0.0 && values.humidity.value == 0.0 || values.pressure.localPressure <= 800)
     console.log("Here's the value: " + values.humidity); 
 
 
