@@ -35,7 +35,7 @@ Als Forscher will ich wissen, welche minimal und Höchsttemperaturen jeden Tag d
 - GUI erstellen
 - GUI Diagramm von Temp.
 
-### **Woche-2**
+### **Woche-3**
 
 - Stromversorgung
 - Daten in Datenbank schreiben
