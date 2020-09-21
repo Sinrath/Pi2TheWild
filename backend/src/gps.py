@@ -150,4 +150,11 @@ if __name__ =="__main__":
         time.sleep(1)
         in_data = gps.read()
         if in_data != []:
-            print gps.latitude, gps.longitude
+            lat = gps.latitude
+            lon = gps.longitude
+            f = open("gps.txt", "w")
+            f.write(str(lat) + ' ')
+            f.write(str(lon))
+            f.close()
+            print lat, lon
+            
