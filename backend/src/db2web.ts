@@ -39,8 +39,9 @@ export async function readmeasurement():Promise<Measurement> {
         arraytemp.push(tempfromzero)
         arrayhumidity.push(humidityfromzero)
         arraypressure.push(pressurefromzero)
-        console.log(row.get('datum'))
+        console.log(row.get('date'))
     }
+    
     
     return new Measurement(arrayId, arraydate, arraytemp, arrayhumidity, arraypressure);
 
@@ -48,12 +49,10 @@ export async function readmeasurement():Promise<Measurement> {
         await client.end();
     }
 
-}
+};
 
 /*export const readmeasurement = () => {
     let readdata = "SELECT * FROM mülleimer;";
-    //let deleteHighest = "DELETE FROM messungtest WHERE temperature in (SELECT temperature FROM (SELECT * FROM messungtest ORDER BY temperature DESC LIMIT 1) a);";
-    //let deleteLowest = "DELETE FROM messungtest WHERE temperature in (SELECT temperature FROM (SELECT * FROM messungtest ORDER BY temperature ASC LIMIT 1) a);";
     client.query(readdata).then((result:any)=>{
         let rows = result.rows;
         let arrayId = [];
@@ -109,6 +108,6 @@ class Measurement{
     /*RecallData() {
       return "ID of the Pi: " + this.arrayId;
     }*/
-  }
+  };
   
 
