@@ -61,10 +61,6 @@ function loadDataDefault () {
         result.json().then(function (fetch_result) {
             console.log(fetch_result);
             
-            //for(var index in fetch_result.arraydate) {
-              //  chart.addData(fetch_result.arraydate[index], [fetch_result.arraytemp[index]]);    
-            //}
-
             var data = {
                 categories: fetch_result.arraydate,
                 series: [

@@ -38,11 +38,8 @@ export const addmeasurement2db:any = async() => {
 
     let formattedDate = (moment(datum)).format('YYYY-MM-DD HH:mm');
     console.log(formattedDate);
-    //Database Insertion
-    let addData = "INSERT INTO measurement VALUES ("+idNumber+",'"+formattedDate+"','"+values.temp+"','"+values.humidity+"','"+values.pressure+"');";
 
-    //let addId = "INSERT INTO device VALUES ('"+idNumber+"');";
-    //console.log(addId);
+    let addData = "INSERT INTO measurement VALUES ("+idNumber+",'"+formattedDate+"','"+values.temp+"','"+values.humidity+"','"+values.pressure+"');";
 
     client.query(addData).then((result:any)=>{
         console.log(result);

@@ -1,6 +1,3 @@
-# Released under the MIT license (http://choosealicense.com/licenses/mit/).
-# For more information see https://github.com/DexterInd/GrovePi/blob/master/LICENSE
-
 import grovepi
 import serial, time, sys
 import re
@@ -146,15 +143,15 @@ class GROVEGPS():
 
 if __name__ =="__main__":
     gps = GROVEGPS()
-    while True:
-        time.sleep(1)
-        in_data = gps.read()
-        if in_data != []:
-            lat = gps.latitude
-            lon = gps.longitude
-            f = open("gps.txt", "w")
-            f.write(str(lat) + ' ')
-            f.write(str(lon))
-            f.close()
-            print lat, lon
+    ##while True:
+      ##  time.sleep(1)
+    in_data = gps.read()
+    if in_data != []:
+        lat = gps.latitude
+        lon = gps.longitude
+        f = open("gps.txt", "w")
+        f.write(str(lat) + ' ')
+        f.write(str(lon))
+        f.close()
+        print lat, lon
             
