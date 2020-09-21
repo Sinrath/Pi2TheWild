@@ -11,7 +11,7 @@ let intervalMeasurement: NodeJS.Timeout;
 
 export let callEverySecond = (finished: () => void ): void => {
     let counter = 1;
-    setTimeout(finished, 300000);
+    setTimeout(finished, 119999);
     //finished();
 
     intervalMeasurement = setInterval(() => {
