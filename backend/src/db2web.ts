@@ -30,7 +30,7 @@ export async function readmeasurement():Promise<Measurement> {
         
     for await (let row of rows) {
         let idfromzero = row.get('id') as number;
-        let datefromzero = row.get('datum') as string;
+        let datefromzero = row.get('dat') as string;
         let tempfromzero = row.get('temperature') as number;
         let humidityfromzero = row.get('humidity') as number;
         let pressurefromzero = row.get('pressure') as number;
@@ -39,7 +39,7 @@ export async function readmeasurement():Promise<Measurement> {
         arraytemp.push(tempfromzero)
         arrayhumidity.push(humidityfromzero)
         arraypressure.push(pressurefromzero)
-        console.log(row.get('date'))
+        //console.log(row.get('date'))
     }
     
     
