@@ -34,5 +34,13 @@ Als Forscher will ich wissen, welche minimal und Höchsttemperaturen jeden Tag d
 - Sensor Ausgabe in Datenbank übertragen 
 - GUI erstellen
 - GUI Diagramm von Temp.
- 
+
+### **Woche-2**
+
+- Stromversorgung
+- Daten in Datenbank schreiben
+- Daten auslesen aus Datenank
+- Diagramm mit richigen Daten aus Datenbank
+- Verbindung zum Pi durch ein Hotspot
+
 
