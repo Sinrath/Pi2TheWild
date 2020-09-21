@@ -1,14 +1,14 @@
 var container = document.getElementById('chart-area');
 var data = {
-    categories: ['08/09/2020', '09/09/2020', '10/09/2020', '11/09/2020', '12/09/2020', '13/09/2020', '14/09/2020'],
+    categories: ['18.09.2020'],
     series: [
         {
         name: 'Pi-0001',
-        data: [1021.3, 1021.8, 1022.1, 1022.3, 1022.7, 1021.6, 1021.1]
+        data: [25]
         },
         {
         name: 'Pi-0002',
-        data: [1020.7, 1019.8, 1021.3, 1022.3, 1022.9, 1022.6, 1021.9]
+        data: [27]
         }
     ]
 };
@@ -16,10 +16,10 @@ var options = {
     chart: {
         width: 1200,
         height: 400,
-        title: 'Average Air Pressure each Day'
+        title: 'Temperature'
     },
     yAxis: {
-        title: 'Air Pressure (hPa)',
+        title: 'Temperature (°C)',
     },
     xAxis: {
         title: 'Time',
@@ -33,12 +33,12 @@ var options = {
         zoomable: true
     },
     tooltip: {
-        suffix: 'hPa'
+        suffix: '°C'
     },
     plot: {
         bands: [
             {
-                range: ['08/09/2020', '14/09/2020'],
+                range: ['17/09/2020', '18/09/2020'],
                 color: 'white',
                 opacity: 0.2
             }
@@ -56,4 +56,33 @@ var theme = {
 // For apply theme
 tui.chart.registerTheme('myTheme', theme);
 options.theme = 'myTheme';
-var chart = tui.chart.lineChart(container, data, options);
+
+function loadDataDefault () {
+    fetch("/measurement").then((result) =>
+        result.json().then(function (fetch_result) {
+            console.log(fetch_result);
+            
+            //for(var index in fetch_result.arraydate) {
+              //  chart.addData(fetch_result.arraydate[index], [fetch_result.arraytemp[index]]);    
+            //}
+
+            var data = {
+                categories: fetch_result.arraydate,
+                series: [
+                    {
+                    name: fetch_result.arrayId[0].toString(),
+                    data: fetch_result.arraypressure
+                    },
+                    {
+                    name: 'Pi-0001',
+                    data: fetch_result.arraypressure
+                    }
+                ]
+            };
+
+            var container = document.getElementById('chart-area')
+            tui.chart.lineChart(container, data, options);
+        })
+    );
+}
+loadDataDefault();

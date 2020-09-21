@@ -1,5 +1,3 @@
-
-
 var container = document.getElementById('chart-area');
 var data = {
     categories: ['18.09.2020'],
@@ -7,6 +5,10 @@ var data = {
         {
         name: 'Pi-0001',
         data: [25]
+        },
+        {
+        name: 'Pi-0002',
+        data: [27]
         }
     ]
 };
@@ -14,7 +16,7 @@ var options = {
     chart: {
         width: 1200,
         height: 400,
-        title: 'Average Temperature each Day'
+        title: 'Temperature'
     },
     yAxis: {
         title: 'Temperature (°C)',
@@ -36,7 +38,7 @@ var options = {
     plot: {
         bands: [
             {
-                range: ['17/09/2020', '19/09/2020'],
+                range: ['17/09/2020', '18/09/2020'],
                 color: 'white',
                 opacity: 0.2
             }
@@ -68,7 +70,7 @@ function loadDataDefault () {
                 categories: fetch_result.arraydate,
                 series: [
                     {
-                    name: 'Pi-0001',
+                    name: fetch_result.arrayId[0].toString(),
                     data: fetch_result.arraytemp
                     }
                 ]
