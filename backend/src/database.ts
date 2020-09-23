@@ -1,7 +1,9 @@
 import {Client, Connect} from 'ts-postgres';
 import moment from 'moment';
 import {GrovePi} from "../../sensor/src/sensors";
-import { readFileSync } from 'fs';
+import {readFileSync} from 'fs';
+import {gpsValues} from './gpsvalues ';
+import {gpsNow} from '../../web/src/readingGPS'
  
 const client = new Client ({
     user : 'postgres',
@@ -34,11 +36,14 @@ export const addmeasurement2db:any = async() => {
         values = await asyncGetSensorValues();
     } while (values.temp.value == 0.0 && values.humidity.value == 0.0 || values.pressure.localPressure <= 800)
     console.log("Here's the value: " + values.humidity); 
-
+    
+    gpsValues();
+    console.log(gpsValues);
 
     let formattedDate = (moment(datum)).format('YYYY-MM-DD HH:mm');
     console.log(formattedDate);
 
+    let addGPS = "INSERT INTO coordinates VALUES ("+idNumber+", '"+formattedDate+"', '"+gpsNow+"');";
     let addData = "INSERT INTO measurement VALUES ("+idNumber+",'"+formattedDate+"','"+values.temp+"','"+values.humidity+"','"+values.pressure+"');";
 
     client.query(addData).then((result:any)=>{
@@ -46,6 +51,10 @@ export const addmeasurement2db:any = async() => {
     }).catch((reason:any)=>{
         console.log(reason);
     })
-
+    client.query(addGPS).then((result:any)=>{
+        console.log(result);
+    }).catch((reason:any)=>{
+        console.log(reason);
+    })
 }
-addmeasurement2db();
+addmeasurement2db()
