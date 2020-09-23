@@ -881,6 +881,7 @@ header>h2 {
   -webkit-text-stroke: .7px black;
 }
 main>h2 {
+  font-family: 'Lucida Console', Courier, monospace, sans-serif;
   font-size: 25px;
 }
 main {
