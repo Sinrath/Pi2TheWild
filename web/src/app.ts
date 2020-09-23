@@ -2,9 +2,9 @@ import express from "express";
 import handlebars from "handlebars";
 import path from "path";
 import fs from "fs";
-import { GrovePi } from "../../sensor/src/sensors";
+import {GrovePi} from "../../sensor/src/sensors";
 import {readmeasurement} from "./db2web";
-import {gpsNow} from "./gps";
+import {gpsNow} from "./readingGPS";
 
 
 const indexFilePath = path.join(__dirname, "../../../public/views/index.html");
@@ -18,19 +18,22 @@ const server = express();
 server.use(express.static('public'));
 
 server.get("/", function (req, res) {
-    
-    sensor.measureTemperature()
-    .then((temp) => {
-        sensor.measureHumidity()
-        .then((humidity) => {
-            let appliedValues = template({
-                humidityNow: humidity,
-                temperatureNow: temp,
-                gpsNow
-         })
-         res.send(appliedValues);
-     })
-    }) 
+    sensor.measureBarometricPressure(438)
+    .then((pressure) => {
+        sensor.measureTemperature()
+        .then((temp) => {
+            sensor.measureHumidity()
+            .then((humidity) => {
+                let appliedValues = template({
+                    pressureNow: pressure,
+                    humidityNow: humidity,
+                    temperatureNow: temp,
+                    gpsNow
+            })
+            res.send(appliedValues);
+            })
+        })
+    })
     .catch(error => console.log(error)); 
 });
 
