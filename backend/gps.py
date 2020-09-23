@@ -150,8 +150,9 @@ if __name__ =="__main__":
         lat = gps.latitude
         lon = gps.longitude
         f = open("gps.txt", "w")
-        f.write(str(lat) + ' ')
-        f.write(str(lon))
+        f.write(str(lat) + ' Latitude, ')
+        f.write(str(lon) + ' Longitude')
         f.close()
-        print lat, lon
+        print (lat)
+        print (lon)
             
