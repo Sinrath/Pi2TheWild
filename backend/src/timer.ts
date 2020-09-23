@@ -4,13 +4,10 @@ import { addmeasurement2db } from './database';
 let intervalMeasurement: NodeJS.Timeout;
 
 export let callEverySecond = (finished: () => void ): void => {
-    let counter = 1;
-    setTimeout(finished, 40000   );
-    
-    intervalMeasurement = setInterval(() => {
+   // setTimeout(finished, 40000   );
+     intervalMeasurement = setInterval(() => {
         addmeasurement2db();
-        counter++;
-    }, 30000);
+    }, 1800000);
 }; 
 
 let finished = (): void => {

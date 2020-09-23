@@ -1,1 +1,1 @@
-47.4968 Latitude 8.729193333333335 Longitude
+47.4968 Latitude, 8.729193333333335 Longitude
