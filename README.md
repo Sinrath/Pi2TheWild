@@ -1,11 +1,11 @@
-Als Forscher will ich wissen, welche minimal und Höchsttemperaturen jeden Tag der Woche herrschen, damit Annahmen über das Temperaturverhalten getroffen werden können.
+Als Forscher will ich wissen, welche Temperaturen, Luftdruck und Luftfeuchtigkeit über den Tag herrschen, damit Annahmen über das verhalten der Tiere getroffen werden können.
 
 ### **Anforderungen**
 
-- Max/Min Temperatur alle 24h
-- Gleichzeitig Feuchtigkeitsmessung
-- Speicherung in Datenbank
-- Anzeige der aktuellen Temperatur/Feuchtigkeit im Browser 
+- Temperatur, Luftdruck und Luftfeuchtigkeit alle 30min
+- Speicherung in einer Datenbank
+- Anzeige der aktuellen Temperatur, Luftdruck und Luftfeuchtigkeit im Browser
+- Herunterladen der Daten aus der Datenbank
 
 ### **Sensor**
 
