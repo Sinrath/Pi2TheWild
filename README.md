@@ -1,5 +1,9 @@
 Als Forscher will ich wissen, welche Temperaturen, Luftdruck und Luftfeuchtigkeit über den Tag herrschen, damit Annahmen über das verhalten der Tiere getroffen werden können.
 
+### **Dokumentation**
+
+- [Link](https://github.zhaw.ch/Vorpraktikum-IT/Pi2TheWild/wiki/Dokumentation/)
+
 ### **Anforderungen**
 
 - Temperatur, Luftdruck und Luftfeuchtigkeit alle 30min
