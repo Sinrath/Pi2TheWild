@@ -43,4 +43,11 @@ Als Forscher will ich wissen, welche minimal und Höchsttemperaturen jeden Tag d
 - Diagramm mit richigen Daten aus Datenbank
 - Verbindung zum Pi durch ein Hotspot
 
+### **Woche-4**
+
+- GPS Daten auf der Website anzeigen
+- Wake-up einstellen wenn Batterie unter 20% ist
+- HTML nochmal anpassen und verschönern
+- Alles Testen und Bereit machen für die Demo
+
 
