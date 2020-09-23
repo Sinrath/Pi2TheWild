@@ -15,11 +15,11 @@ Als Forscher will ich wissen, welche Temperaturen, Luftdruck und Luftfeuchtigkei
 
 ### **GUI-Skizze**
 
-![5F10690A-6049-4488-9336-3B0B97EE4DCA](https://github.zhaw.ch/storage/user/3667/files/6f0dce00-eb78-11ea-8626-f5a1157314c4)
+![IMG_1311](https://github.zhaw.ch/storage/user/3667/files/7b203080-fdb0-11ea-9a61-90eeb4bbd68a)
 
 ### **Datenbank-Skizze**
 
-![59F0DBAD-F7DE-424D-9024-7AB280F730FD](https://github.zhaw.ch/storage/user/3667/files/703efb00-eb78-11ea-89fc-304bea92d504)
+![IMG_1312](https://github.zhaw.ch/storage/user/3667/files/7ce9f400-fdb0-11ea-81cb-85e35869a7df)
 
 ### **Woche-1**
 
