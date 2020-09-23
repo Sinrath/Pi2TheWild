@@ -4,6 +4,7 @@ import path from "path";
 import fs from "fs";
 import { GrovePi } from "../../sensor/src/sensors";
 import {readmeasurement} from "./db2web";
+import {gpsNow} from "./gps";
 
 
 const indexFilePath = path.join(__dirname, "../../../public/views/index.html");
@@ -16,7 +17,6 @@ const server = express();
 
 server.use(express.static('public'));
 
-
 server.get("/", function (req, res) {
     
     sensor.measureTemperature()
@@ -25,15 +25,13 @@ server.get("/", function (req, res) {
         .then((humidity) => {
             let appliedValues = template({
                 humidityNow: humidity,
-                temperatureNow: temp
+                temperatureNow: temp,
+                gpsNow
          })
          res.send(appliedValues);
      })
-    })
-     
-    
-    .catch(error => console.log(error));
-    
+    }) 
+    .catch(error => console.log(error)); 
 });
 
 server.get('/measurement', async (req,res) => {
