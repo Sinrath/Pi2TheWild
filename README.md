@@ -9,7 +9,9 @@ Als Forscher will ich wissen, welche Temperaturen, Luftdruck und Luftfeuchtigkei
 
 ### **Sensor**
 
-- [Grove - Temperature and Humidity Sensor Pro](https://seeeddoc.github.io/Grove-Temperature_and_Humidity_Sensor_Pro/#:~:text=Go%20pro%20in%20temperature%20and,applications%20with%20this%20Grove%20gadget.&text=The%20detecting%20range%20of%20this,RH%20and%200.5%C2%B0C.)
+- [Grove - Temp&Hum Sensor Pro](https://wiki.seeedstudio.com/Grove-Temperature_and_Humidity_Sensor_Pro/)
+- [Grove - GPS](https://wiki.seeedstudio.com/Grove-GPS/)
+- [Grove - Barometer Sensor](https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/)
 
 ### **GUI-Skizze**
 
