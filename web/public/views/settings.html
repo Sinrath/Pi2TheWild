@@ -6,6 +6,7 @@
     <title>Wetterstation</title>
     <link rel="stylesheet" href="/css/tui-chart.css">
     <title>Document</title>
+    <script src="../scripts/settings.js"></script>
 </head>
 <body>
     <nav>
@@ -23,14 +24,32 @@
         <a href="/views/settings.html">Settings</a>
     </nav> 
     <main>
-        <p>SETTINGS!</p>
-        <div class="spinner">
+        <p></p>
+
+        <h1>Coordinates of current Pi:</h1>
+        
+        <button onclick="buttonFunction()">Deleting Database</button>
+        <script>
+        function buttonFunction() {
+        if (confirm('Are you sure you want to permanently delete all current data from the database?')) {
+        // Save it!
+        console.log(loadDataDefault());
+        console.log('Data was deleted successfully')
+        } else {
+        // Do nothing!
+        console.log('');
+        }};
+        </script>
+
+
+         <!--<div class="spinner">
             <div class="rect1"></div>
             <div class="rect2"></div>
             <div class="rect3"></div>
             <div class="rect4"></div>
             <div class="rect5"></div>
-          </div>
+          </div>-->
     </main>
 </body>
 </html>
+

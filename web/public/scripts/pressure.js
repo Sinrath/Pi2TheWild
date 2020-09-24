@@ -48,7 +48,7 @@ var options = {
 var theme = {
     series: {
         colors: [
-            '#2f89fc'
+            '#0099e5'
         ]
     }
 };

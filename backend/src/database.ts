@@ -15,7 +15,7 @@ const client = new Client({
 
 const sensor = new GrovePi(1);
 
-const idNumber = readFileSync("/home/pi/Pi2TheWild/ID/id.txt", "utf-8");
+export const idNumber = readFileSync("/home/pi/Pi2TheWild/ID/id.txt", "utf-8");
 
 client.connect().then((connect: Connect) => {
     console.log(connect);
@@ -35,7 +35,7 @@ export const addmeasurement2db: any = async () => {
     do {
         values = await asyncGetSensorValues();
     } while (values.temp.value == 0.0 && values.humidity.value == 0.0 || values.pressure.localPressure <= 800)
-    console.log("Here's the value: " + values.humidity);
+    //console.log("Here's the value: " + values.humidity);
 
     gpsValues();
     console.log(gpsValues);

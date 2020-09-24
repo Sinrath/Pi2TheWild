@@ -30,13 +30,17 @@
         <h2>Pi2TheWild</h2>
     </header>
     <main>
-        <h1>the current temperature is:</h1>
-        <h2>{{temperatureNow}}°C</h2>
-        <h1>The current humidity is:</h1>
-        <h2>{{humidityNow}}%</h2>
-        <h1>The current pressure is:</h1>
-        <h2>{{pressureNow}}hPa</h2>
-        <h2>{{gpsNow}}</h2>
+    <div class="grid-container">
+        <div class="grid-item1"><h1>Temperature</h1>
+        <h2>{{temperatureNow}}°C</h2></div>
+        <div class="grid-item2"><h1>Humidity</h1>
+        <h2>{{humidityNow}}%</h2></div>
+        <div class="grid-item3"><h1>Pressure</h1>
+        <h2>{{pressureNow}}hPa</h2></div>
+        <div class="grid-item4">
+        <h1>Coordinates of current Pi:</h1>
+        <h2>{{gpsNow}}</h2></div>
+    </div>
     </main>
 </body>
 </html>

@@ -38,7 +38,7 @@ export async function readmeasurement():Promise<Measurement> {
         await client.end();
 }};
 
-class Measurement{
+export class Measurement{
     arrayId:Array<number>;
     arraydate:Array<string>;
     arraytemp:Array<number>;
