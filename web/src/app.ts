@@ -4,7 +4,7 @@ import path from "path";
 import fs from "fs";
 import { GrovePi } from "../../sensor/src/sensors";
 import { readmeasurement } from "./db2web";
-import {deleteDB} from './button';
+import { deleteDB } from './button';
 import { gpsNow } from "./readingGPS";
 
 
