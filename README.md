@@ -1,23 +1,29 @@
-Als Forscher will ich wissen, welche minimal und Höchsttemperaturen jeden Tag der Woche herrschen, damit Annahmen über das Temperaturverhalten getroffen werden können.
+Als Forscher will ich wissen, welche Temperaturen, Luftdruck und Luftfeuchtigkeit über den Tag herrschen, damit Annahmen über das verhalten der Tiere getroffen werden können.
+
+### **Dokumentation**
+
+- [Link](https://github.zhaw.ch/Vorpraktikum-IT/Pi2TheWild/wiki/Dokumentation/)
 
 ### **Anforderungen**
 
-- Max/Min Temperatur alle 24h
-- Gleichzeitig Feuchtigkeitsmessung
-- Speicherung in Datenbank
-- Anzeige der aktuellen Temperatur/Feuchtigkeit im Browser 
+- Temperatur, Luftdruck und Luftfeuchtigkeit alle 30min
+- Speicherung in einer Datenbank
+- Anzeige der aktuellen Temperatur, Luftdruck und Luftfeuchtigkeit im Browser
+- Herunterladen der Daten aus der Datenbank
 
 ### **Sensor**
 
-- [Grove - Temperature and Humidity Sensor Pro](https://seeeddoc.github.io/Grove-Temperature_and_Humidity_Sensor_Pro/#:~:text=Go%20pro%20in%20temperature%20and,applications%20with%20this%20Grove%20gadget.&text=The%20detecting%20range%20of%20this,RH%20and%200.5%C2%B0C.)
+- [Grove - Temp&Hum Sensor Pro](https://wiki.seeedstudio.com/Grove-Temperature_and_Humidity_Sensor_Pro/)
+- [Grove - GPS](https://wiki.seeedstudio.com/Grove-GPS/)
+- [Grove - Barometer Sensor](https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/)
 
 ### **GUI-Skizze**
 
-![5F10690A-6049-4488-9336-3B0B97EE4DCA](https://github.zhaw.ch/storage/user/3667/files/6f0dce00-eb78-11ea-8626-f5a1157314c4)
+![IMG_1311](https://github.zhaw.ch/storage/user/3667/files/7b203080-fdb0-11ea-9a61-90eeb4bbd68a)
 
 ### **Datenbank-Skizze**
 
-![59F0DBAD-F7DE-424D-9024-7AB280F730FD](https://github.zhaw.ch/storage/user/3667/files/703efb00-eb78-11ea-89fc-304bea92d504)
+![IMG_1312](https://github.zhaw.ch/storage/user/3667/files/7ce9f400-fdb0-11ea-81cb-85e35869a7df)
 
 ### **Woche-1**
 
@@ -42,5 +48,12 @@ Als Forscher will ich wissen, welche minimal und Höchsttemperaturen jeden Tag d
 - Daten auslesen aus Datenank
 - Diagramm mit richigen Daten aus Datenbank
 - Verbindung zum Pi durch ein Hotspot
+
+### **Woche-4**
+
+- GPS Daten auf der Website anzeigen
+- Wake-up einstellen wenn Batterie unter 20% ist
+- HTML nochmal anpassen und verschönern
+- Alles Testen und Bereit machen für die Demo
 
 
