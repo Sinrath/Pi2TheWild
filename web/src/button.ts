@@ -1,7 +1,4 @@
-import { stringify } from 'querystring';
 import { Client, Connect } from 'ts-postgres';
-import { addmeasurement2db } from '../../backend/src/database';
-import express from "express";
 
 const client = new Client({
     user: 'postgres',
