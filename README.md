@@ -1,3 +1,5 @@
+## Ziel
+
 Als Forscher will ich wissen, welche Temperaturen, Luftdruck und Luftfeuchtigkeit über den Tag herrschen, damit Annahmen über das verhalten der Tiere getroffen werden können.
 
 ### **Anleitung**
@@ -24,6 +26,8 @@ Als Forscher will ich wissen, welche Temperaturen, Luftdruck und Luftfeuchtigkei
 ### **Datenbank-Skizze**
 
 ![IMG_1312](https://github.zhaw.ch/storage/user/3667/files/7ce9f400-fdb0-11ea-81cb-85e35869a7df)
+
+## Planung
 
 ### **Woche-1**
 
