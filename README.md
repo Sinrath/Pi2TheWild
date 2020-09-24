@@ -4,7 +4,7 @@ Als Forscher will ich wissen, welche Temperaturen, Luftdruck und Luftfeuchtigkei
 
 ### **Anleitung**
 
-- [Link](https://github.zhaw.ch/Vorpraktikum-IT/Pi2TheWild/wiki/Anleitung/)
+- [Link](https://github.zhaw.ch/Vorpraktikum-IT/Pi2TheWild/wiki/Dokumentation)
 
 ### **Anforderungen**
 
