@@ -55,5 +55,6 @@ Als Forscher will ich wissen, welche Temperaturen, Luftdruck und Luftfeuchtigkei
 - Wake-up einstellen wenn Batterie unter 20% ist
 - HTML nochmal anpassen und verschönern
 - Alles Testen und Bereit machen für die Demo
+- Butten einfügen für das löschen der Daten auf der Datenbank
 
 
